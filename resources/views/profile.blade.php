@@ -6,10 +6,10 @@
         <h1 style="text-transform: uppercase;">{{ Session::get('user')['name'] }}</h1>
 
         <p>{{ Session::get('user')['email'] }}</p>
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
+
+        <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
         <p><button><a href="mailto:{{ Session::get('user')['email'] }}" style="color: #fff">Contact</a></button></p>
     </div>
 @endsection
