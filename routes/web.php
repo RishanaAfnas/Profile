@@ -18,13 +18,15 @@ use App\Http\Controllers\profileController;
 Route::get('/login', function () {
     return view('login');
 });
+
 Route::get('/logout', function () {
     Session::forget('user');
     return redirect('login');
 });
+Route::view('/','login');
 Route::view('/register','register');
 Route::post('/login',[userController::class,'login']);
 Route::post("/register",[userController::class,'register']);
-Route::get("/",[profileController::class,'index']);
+Route::get("/profile",[profileController::class,'index']);
 
 ?>

@@ -6,11 +6,12 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\User;
 
+
 class userController extends Controller
 {
     function register(Request $req)
     {
-      $user=new User;
+         $user=new User;
       $user->name=$req->name;
       $user->email=$req->email;
       $user->password=HASH::make($req->password);
@@ -33,7 +34,7 @@ class userController extends Controller
         }
         else{
            $req->session()->put('user',$user);
-           return redirect('/');
+           return redirect('/profile');
         }
     }
 }

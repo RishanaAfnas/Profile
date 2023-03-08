@@ -11,3 +11,4 @@ class profileController extends Controller
         return view('profile');
     }
 }
+?>
